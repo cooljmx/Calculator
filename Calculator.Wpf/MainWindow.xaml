@@ -3,10 +3,133 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calculator.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Calculator"
+        Width="800"
+        Height="450">
+    <Grid Background="Red"
+          ShowGridLines="False"
+          Margin="3">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0"
+                Grid.Column="0"
+                Content="%"/>
+
+        <Button Grid.Row="0"
+                Grid.Column="2"
+                Content="CE"/>
+
+        <Button Grid.Row="0"
+                Grid.Column="4"
+                Content="C"/>
+
+        <Button Grid.Row="0"
+                Grid.Column="6"
+                Content="Bs"/>
+
+        <Button Grid.Row="2"
+                Grid.Column="0"
+                Content="1/x" />
+
+        <Button Grid.Row="2"
+                Grid.Column="2"
+                Content="x2" />
+
+        <Button Grid.Row="2"
+                Grid.Column="4"
+                Content="2lx" />
+
+        <Button Grid.Row="2"
+                Grid.Column="6"
+                Content="./." />
+
+        <Button Grid.Row="4"
+                Grid.Column="0"
+                Content="7" />
+
+        <Button Grid.Row="4"
+                Grid.Column="2"
+                Content="8" />
+
+        <Button Grid.Row="4"
+                Grid.Column="4"
+                Content="9" />
+
+        <Button Grid.Row="4"
+                Grid.Column="6"
+                Content="X" />
+
+        <Button Grid.Row="6"
+                Grid.Column="0"
+                Content="4" />
+
+        <Button Grid.Row="6"
+                Grid.Column="2"
+                Content="5" />
+
+        <Button Grid.Row="6"
+                Grid.Column="4"
+                Content="6" />
+
+        <Button Grid.Row="6"
+                Grid.Column="6"
+                Content="-" />
+
+        <Button Grid.Row="8"
+                Grid.Column="0"
+                Content="1" />
+
+        <Button Grid.Row="8"
+                Grid.Column="2"
+                Content="2" />
+
+        <Button Grid.Row="8"
+                Grid.Column="4"
+                Content="3" />
+
+        <Button Grid.Row="8"
+                Grid.Column="6"
+                Content="+" />
+
+        <Button Grid.Row="10"
+                Grid.Column="0"
+                Content="+/-" />
+
+        <Button Grid.Row="10"
+                Grid.Column="2"
+                Content="0" />
+
+        <Button Grid.Row="10"
+                Grid.Column="4"
+                Content="," />
+
+        <Button Grid.Row="10"
+                Grid.Column="6"
+                Content="=" />
 
     </Grid>
 </Window>
