@@ -5,12 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Calculator"
-        Width="800"
-        Height="450">
-    <Grid Background="Red"
-          ShowGridLines="False"
-          Margin="3">
+        Width="320"
+        Height="530"
+        Background="#1F1F1F">
+    <Window.Resources>
 
+        <Style x:Key="BaseButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Foreground"
+                    Value="#FFFFFF" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="FontSize"
+                    Value="18" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver"
+                         Value="True">
+                    <Setter Property="Background"
+                            Value="#4D4D4D" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="BlackButtonStyle"
+               TargetType="{x:Type Button}"
+               BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background"
+                    Value="#060606" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+        </Style>
+
+        <Style x:Key="GreyButtonStyle"
+               TargetType="{x:Type Button}"
+               BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background"
+                    Value="#131313" />
+        </Style>
+
+        <Style x:Key="ResultButtonStyle"
+               TargetType="{x:Type Button}"
+               BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background"
+                    Value="#134369" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver"
+                         Value="True">
+                    <Setter Property="Background"
+                            Value="#036FC4" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    <Grid Margin="3">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="2" />
@@ -24,7 +83,6 @@
             <RowDefinition Height="2" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2" />
@@ -37,98 +95,122 @@
 
         <Button Grid.Row="0"
                 Grid.Column="0"
-                Content="%"/>
+                Style="{StaticResource GreyButtonStyle}"
+                Content="%" />
 
         <Button Grid.Row="0"
                 Grid.Column="2"
-                Content="CE"/>
+                Style="{StaticResource GreyButtonStyle}"
+                Content="CE" />
 
         <Button Grid.Row="0"
                 Grid.Column="4"
-                Content="C"/>
+                Style="{StaticResource GreyButtonStyle}"
+                Content="C" />
 
         <Button Grid.Row="0"
                 Grid.Column="6"
-                Content="Bs"/>
+                Style="{StaticResource GreyButtonStyle}"
+                Content="Bs" />
 
         <Button Grid.Row="2"
                 Grid.Column="0"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="1/x" />
 
         <Button Grid.Row="2"
                 Grid.Column="2"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="x2" />
 
         <Button Grid.Row="2"
                 Grid.Column="4"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="2lx" />
 
         <Button Grid.Row="2"
                 Grid.Column="6"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="./." />
 
         <Button Grid.Row="4"
                 Grid.Column="0"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="7" />
 
         <Button Grid.Row="4"
                 Grid.Column="2"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="8" />
 
         <Button Grid.Row="4"
                 Grid.Column="4"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="9" />
 
         <Button Grid.Row="4"
                 Grid.Column="6"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="X" />
 
         <Button Grid.Row="6"
                 Grid.Column="0"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="4" />
 
         <Button Grid.Row="6"
                 Grid.Column="2"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="5" />
 
         <Button Grid.Row="6"
                 Grid.Column="4"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="6" />
 
         <Button Grid.Row="6"
                 Grid.Column="6"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="-" />
 
         <Button Grid.Row="8"
                 Grid.Column="0"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="1" />
 
         <Button Grid.Row="8"
                 Grid.Column="2"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="2" />
 
         <Button Grid.Row="8"
                 Grid.Column="4"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="3" />
 
         <Button Grid.Row="8"
                 Grid.Column="6"
+                Style="{StaticResource GreyButtonStyle}"
                 Content="+" />
 
         <Button Grid.Row="10"
                 Grid.Column="0"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="+/-" />
 
         <Button Grid.Row="10"
                 Grid.Column="2"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="0" />
 
         <Button Grid.Row="10"
                 Grid.Column="4"
+                Style="{StaticResource BlackButtonStyle}"
                 Content="," />
 
         <Button Grid.Row="10"
                 Grid.Column="6"
+                Style="{StaticResource ResultButtonStyle}"
                 Content="=" />
 
     </Grid>
