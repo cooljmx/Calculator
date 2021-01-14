@@ -1,10 +1,11 @@
-﻿using Calculator.Wpf.ViewModels;
+﻿using System;
+using Calculator.Wpf.ViewModels;
 
 namespace Calculator.Wpf.Views
 {
     public partial class MainWindow
     {
-        public MainWindow(IMainWindowViewModel mainWindowViewModel)
+        public MainWindow(MainWindowViewModel mainWindowViewModel)
         {
             InitializeComponent();
 

@@ -9,7 +9,8 @@
         Width="320"
         Height="450"
         Background="#1F1F1F"
-        d:DataContext="{d:DesignInstance viewModels:IMainWindowViewModel}">
+        ResizeMode="CanMinimize"
+        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}">
     <Window.Resources>
 
         <Style x:Key="BaseButtonStyle"
@@ -124,6 +125,7 @@
             <Button Grid.Row="0"
                     Grid.Column="4"
                     Style="{StaticResource GreyButtonStyle}"
+                    Command="{Binding ClearButtonCommand}"
                     Content="C" />
 
             <Button Grid.Row="0"
@@ -154,16 +156,19 @@
             <Button Grid.Row="4"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button7Command}"
                     Content="7" />
 
             <Button Grid.Row="4"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button8Command}"
                     Content="8" />
 
             <Button Grid.Row="4"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button9Command}"
                     Content="9" />
 
             <Button Grid.Row="4"
@@ -174,16 +179,19 @@
             <Button Grid.Row="6"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button4Command}"
                     Content="4" />
 
             <Button Grid.Row="6"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button5Command}"
                     Content="5" />
 
             <Button Grid.Row="6"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button6Command}"
                     Content="6" />
 
             <Button Grid.Row="6"
@@ -194,16 +202,19 @@
             <Button Grid.Row="8"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button1Command}"
                     Content="1" />
 
             <Button Grid.Row="8"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button2Command}"
                     Content="2" />
 
             <Button Grid.Row="8"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button3Command}"
                     Content="3" />
 
             <Button Grid.Row="8"
@@ -219,6 +230,7 @@
             <Button Grid.Row="10"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
+                    Command="{Binding Button0Command}"
                     Content="0" />
 
             <Button Grid.Row="10"
