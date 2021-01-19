@@ -10,7 +10,7 @@
         Height="450"
         Background="#1F1F1F"
         ResizeMode="CanMinimize"
-        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}">
+        d:DataContext="{d:DesignInstance viewModels:IMainWindowViewModel}">
     <Window.Resources>
 
         <Style x:Key="BaseButtonStyle"
@@ -156,19 +156,22 @@
             <Button Grid.Row="4"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button7Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="7"
                     Content="7" />
 
             <Button Grid.Row="4"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button8Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="8"
                     Content="8" />
 
             <Button Grid.Row="4"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button9Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="9"
                     Content="9" />
 
             <Button Grid.Row="4"
@@ -179,19 +182,22 @@
             <Button Grid.Row="6"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button4Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="4"
                     Content="4" />
 
             <Button Grid.Row="6"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button5Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="5"
                     Content="5" />
 
             <Button Grid.Row="6"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button6Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="6"
                     Content="6" />
 
             <Button Grid.Row="6"
@@ -202,19 +208,22 @@
             <Button Grid.Row="8"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button1Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="1"
                     Content="1" />
 
             <Button Grid.Row="8"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button2Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="2"
                     Content="2" />
 
             <Button Grid.Row="8"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button3Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="3"
                     Content="3" />
 
             <Button Grid.Row="8"
@@ -230,7 +239,8 @@
             <Button Grid.Row="10"
                     Grid.Column="2"
                     Style="{StaticResource BlackButtonStyle}"
-                    Command="{Binding Button0Command}"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="0"
                     Content="0" />
 
             <Button Grid.Row="10"

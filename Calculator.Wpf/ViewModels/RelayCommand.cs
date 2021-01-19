@@ -5,10 +5,10 @@ namespace Calculator.Wpf.ViewModels
 {
     public class RelayCommand : ICommand
     {
-        private readonly Func<bool> _canExecute;
-        private readonly Action _execute;
+        private readonly Func<object, bool> _canExecute;
+        private readonly Action<object> _execute;
 
-        public RelayCommand(Action execute, Func<bool> canExecute = null)
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             _execute = execute;
             _canExecute = canExecute;
@@ -16,12 +16,12 @@ namespace Calculator.Wpf.ViewModels
 
         public bool CanExecute(object? parameter)
         {
-            return _canExecute?.Invoke() ?? true;
+            return _canExecute?.Invoke(parameter) ?? true;
         }
 
         public void Execute(object? parameter)
         {
-            _execute.Invoke();
+            _execute.Invoke(parameter);
         }
 
         public event EventHandler? CanExecuteChanged;
