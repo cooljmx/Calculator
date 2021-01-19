@@ -73,6 +73,71 @@
 
     </Window.Resources>
 
+    <Window.InputBindings>
+        <KeyBinding Key="Escape"
+                    Command="{Binding ClearButtonCommand}" />
+        <KeyBinding Key="D0"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="0" />
+        <KeyBinding Key="NumPad0"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="0" />
+        <KeyBinding Key="D1"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="1" />
+        <KeyBinding Key="NumPad1"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="1" />
+        <KeyBinding Key="D2"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="2" />
+        <KeyBinding Key="NumPad2"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="2" />
+        <KeyBinding Key="D3"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="3" />
+        <KeyBinding Key="NumPad3"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="3" />
+        <KeyBinding Key="D4"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="4" />
+        <KeyBinding Key="NumPad4"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="4" />
+        <KeyBinding Key="D5"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="5" />
+        <KeyBinding Key="NumPad5"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="5" />
+        <KeyBinding Key="D6"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="6" />
+        <KeyBinding Key="NumPad6"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="6" />
+        <KeyBinding Key="D7"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="7" />
+        <KeyBinding Key="NumPad7"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="7" />
+        <KeyBinding Key="D8"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="8" />
+        <KeyBinding Key="NumPad8"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="8" />
+        <KeyBinding Key="D9"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="9" />
+        <KeyBinding Key="NumPad9"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="9" />
+    </Window.InputBindings>
+
     <Grid Margin="3">
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
