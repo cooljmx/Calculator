@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Calculator.Wpf.ViewModels;
+using Calculator.Wpf.Views;
 
 namespace Calculator.Wpf
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    public partial class App
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var mainWindowViewModel = new MainWindowViewModel();
+
+            MainWindow = new MainWindow(mainWindowViewModel);
+
+            MainWindow.Show();
+        }
     }
 }
