@@ -28,7 +28,6 @@
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center" />
                         </Border>
-
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -37,6 +36,11 @@
                          Value="True">
                     <Setter Property="Background"
                             Value="#4D4D4D" />
+                </Trigger>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Foreground"
+                            Value="#4E4E50" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -67,6 +71,11 @@
                          Value="True">
                     <Setter Property="Background"
                             Value="#036FC4" />
+                </Trigger>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Background"
+                            Value="#131313" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -180,11 +189,13 @@
             <Button Grid.Row="0"
                     Grid.Column="0"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="%" />
 
             <Button Grid.Row="0"
                     Grid.Column="2"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="CE" />
 
             <Button Grid.Row="0"
@@ -196,26 +207,31 @@
             <Button Grid.Row="0"
                     Grid.Column="6"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="Bs" />
 
             <Button Grid.Row="2"
                     Grid.Column="0"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="1/x" />
 
             <Button Grid.Row="2"
                     Grid.Column="2"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="x2" />
 
             <Button Grid.Row="2"
                     Grid.Column="4"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="2lx" />
 
             <Button Grid.Row="2"
                     Grid.Column="6"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="./." />
 
             <Button Grid.Row="4"
@@ -242,6 +258,7 @@
             <Button Grid.Row="4"
                     Grid.Column="6"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="X" />
 
             <Button Grid.Row="6"
@@ -268,6 +285,7 @@
             <Button Grid.Row="6"
                     Grid.Column="6"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="-" />
 
             <Button Grid.Row="8"
@@ -294,11 +312,13 @@
             <Button Grid.Row="8"
                     Grid.Column="6"
                     Style="{StaticResource GreyButtonStyle}"
+                    IsEnabled="False"
                     Content="+" />
 
             <Button Grid.Row="10"
                     Grid.Column="0"
                     Style="{StaticResource BlackButtonStyle}"
+                    IsEnabled="False"
                     Content="+/-" />
 
             <Button Grid.Row="10"
@@ -311,13 +331,14 @@
             <Button Grid.Row="10"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
+                    IsEnabled="False"
                     Content="," />
 
             <Button Grid.Row="10"
                     Grid.Column="6"
                     Style="{StaticResource ResultButtonStyle}"
+                    IsEnabled="False"
                     Content="=" />
-
         </Grid>
     </Grid>
 </Window>
