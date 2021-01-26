@@ -145,6 +145,15 @@
         <KeyBinding Key="NumPad9"
                     Command="{Binding DigitalButtonCommand}"
                     CommandParameter="9" />
+        <KeyBinding Key="Decimal"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="," />
+        <KeyBinding Key="OemComma"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="," />
+        <KeyBinding Key="OemPeriod"
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="," />
     </Window.InputBindings>
 
     <Grid Margin="3">
@@ -331,8 +340,9 @@
             <Button Grid.Row="10"
                     Grid.Column="4"
                     Style="{StaticResource BlackButtonStyle}"
-                    IsEnabled="False"
-                    Content="," />
+                    Content=","
+                    Command="{Binding DigitalButtonCommand}"
+                    CommandParameter="," />
 
             <Button Grid.Row="10"
                     Grid.Column="6"

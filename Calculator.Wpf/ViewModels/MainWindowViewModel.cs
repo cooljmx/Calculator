@@ -35,10 +35,14 @@ namespace Calculator.Wpf.ViewModels
 
         private void DigitalButtonCommandExecute(object parameter)
         {
-            if (ResultPanel == "0")
-                ResultPanel = parameter.ToString();
+            var character = parameter.ToString();
+
+            if (ResultPanel == "0" && character == ",")
+                ResultPanel += character;
+            else if (ResultPanel == "0")
+                ResultPanel = character;
             else
-                ResultPanel += parameter;
+                ResultPanel += character;
         }
     }
 }

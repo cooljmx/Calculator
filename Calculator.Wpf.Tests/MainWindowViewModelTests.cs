@@ -53,7 +53,17 @@ namespace Calculator.Wpf.Tests
             viewModel.DigitalButtonCommand.Execute("5");
             viewModel.DigitalButtonCommand.Execute("2");
 
-            Assert.That(viewModel.ResultPanel,Is.EqualTo("52"));
+            Assert.That(viewModel.ResultPanel, Is.EqualTo("52"));
+        }
+
+        [Test]
+        public void ReturnsAggregatedZeroWithDelimiterFromResultPanelWhenDigitalButtonCommandExecutedWithDelimiter()
+        {
+            var viewModel = new MainWindowViewModel();
+
+            viewModel.DigitalButtonCommand.Execute(",");
+
+            Assert.That(viewModel.ResultPanel, Is.EqualTo("0,"));
         }
     }
 }
